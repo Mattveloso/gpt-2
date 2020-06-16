@@ -5,11 +5,14 @@ import json
 import os
 import numpy as np
 import tensorflow as tf
-
+import sys
+sys.path.append("D:/Users/Shadow/Documents/GitHub/gpt-2/src/")
 import model, sample, encoder
 
+# raw_text= """<|endoftext|>"""
+
 def interact_model(
-    model_name='124M',
+    model_name='355M',
     seed=None,
     nsamples=1,
     batch_size=1,
@@ -89,4 +92,3 @@ def interact_model(
 
 if __name__ == '__main__':
     fire.Fire(interact_model)
-
